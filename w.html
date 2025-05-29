@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WildBroker | Crypto Trading</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="w.css">
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "MfrXge7O_btiz5obN",
+      });
+   })();
+</script>
+<script src="w.js"></script>
+
+
+  <style>
+    .navbar-toggler {
+      border-color: white;
+    }
+    body {
+      padding-top: 80px;
+    }
+    .navbar-nav .nav-link {
+      font-weight: 500;
+    }
+    .card-title {
+      color: #373737;
+    }
+    .counter {
+      font-size: 2.5rem;
+      color: #373737;
+    }
+
+    .custom-blur-shadow{
+      box-shadow: 0 1.5px 12px white;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      background-color: aqua;
+    }
+
+    .custom-underline{
+      display: inline-block;
+      border-bottom: 1px solid #b8843d;
+    }
+
+    .custom-hover:hover{
+      box-shadow: 0 1.5px 12px white;
+      cursor: pointer;
+    }
+    .section-full-height{
+      height: auto;
+    }
+
+    @media (min-width:992px){
+      .section-full-height{
+        height: 70vh;
+      }
+      /* #contact{
+        width: 70vh;
+      } */
+    }
+/* 
+    #contact{
+      width: auto;
+    } */
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-primary fixed-top bg-black py-4 px-4 custom-blur-shadow" id="navBar">
+    <div class="container-fluid ">
+      <a class="navbar-brand text-white fw-bold display-1" href="#main">WildBroker</a>
+      <button
+        class="navbar-toggler text-white"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon "></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-white" href="#main">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#FAQ">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Contact -->
+        <div class="d-lg-none mt-3 ps-3 text-white">
+          <p><i class="fas fa-envelope me-2"></i> info@finassetpulse.com</p>
+          <p><i class="fab fa-whatsapp me-2"></i> WhatsApp Us</p>
+          <a href="#" class="btn btn-dark">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class=" bg-black text-white d-flex justify-content-center align-items-center mt-5" id="main" style="min-height:90vh;">
+    <div class="container align-self-center">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center text-lg-start">
+          <h1 class="display-3 fw-bold py-2" >Buy & Sell Crypto Instantly Anywhere, Anytime.</h1>
+          <p class="lead text-white pt-3">CryptoBridge helps you trade BTC, ETH, USDT and more with speed, transparency, and security.</p>
+          <p class="lead text-white">Our platform, unlike any other, guarantees fix hourly Interest for investors regardless of market conditions</p>
+          <div class="mt-4">
+            <a href="mailto:onyekegodstime@gmail.com" class="btn btn-primary me-2" target="_blank">
+              <i class="fas fa-envelope me-1"></i> Email
+            </a>
+            <a href="https://wa.me/09016886721" class="btn btn-success" target="_blank">
+              <i class="fab fa-whatsapp me-1"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="img/nft-7219625_1920.png" alt="Crypto Trading" class="img-fluid rounded shadow" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class=" bg-black pb-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-white mb-3 custom-underline">How to get started with WildBroker</h2>
+          <h5 class="fw-light">Learn how to get started investing with WildBroker</h5>
+        </div>
+        <h2 class="fw-bold text-secondary mb-3">Welcome to WildBroker</h2>
+        <div class="col-lg-6 mb-4 mb-lg-0" style="max-width: 550px;">
+          <img src="img/Piggy Bank and Bitcoin.jpeg" alt="WildBroker - Trusted Crypto Expert" class="img-fluid rounded shadow w-auto h-75" />
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fw-bold">A Trusted Crypto Partner Since 2020</h2>
+          <p class="lead mt-3">
+            WildBroker was founded to make crypto trading stress-free for everyone. Since 2020, we've helped over
+            <strong>500 individuals and businesses</strong> across Nigeria and beyond exchange digital assets with speed and peace of mind.
+          </p>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-check-circle text-success me-2"></i>Fast, friendly responses</li>
+            <li><i class="fas fa-check-circle text-success me-2"></i>Clear, upfront rates</li>
+            <li><i class="fas fa-check-circle text-success me-2"></i>Secure transactions, always</li>
+          </ul>
+          <div class="mt-4">
+            <h5 class="text-white">Here’s how it works:</h5>
+            <ol class="ps-3">
+              <li>Message us your trade request</li>
+              <li>We confirm the best available rate and provide wallet address</li>
+              <li>Transaction is completed — you get paid fast</li>
+            </ol>
+          </div>
+          <p class="mt-4 text-white">
+            We believe in long-term relationships built on transparency, honesty, and speed. <strong>WildBroker</strong> isn’t just a service — it's your crypto partner.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investment Plans -->
+  <section id="plans" class="py-5 bg-black">
+    <div class="container">
+      <h2 class="text-center fw-bold text-white mb-5">Our Investment Plans</h2>
+      <div class="row g-4">
+
+        <!-- Starter Plan -->
+        <div class="col-md-4 ">
+          <div class="card shadow-sm h-100">
+            <div class="card-body custom-hover">
+              <h5 class="card-title fw-bold">Starter Plan</h5>
+              <p><strong>Crypto Focus:</strong> Stablecoins (USDT, USDC)</p>
+              <p><strong>Risk Level:</strong> Low</p>
+              <p><strong>Monthly ROI:</strong> 6%</p>
+              <p><strong>Minimum Deposit:</strong> $50</p>
+              <ul class="list-unstyled mt-3">
+                <li><i class="fas fa-check-circle text-success me-2"></i>Low-volatility assets</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Perfect for beginners</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Weekly ROI updates via email</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Manual withdrawal anytime</li>
+              </ul>
+              <div class="mt-4 d-flex flex-wrap gap-2">
+                <a href="https://wa.me/your-number" class="btn btn-success btn-sm">
+                  <i class="fab fa-whatsapp me-1"></i> Talk to Us
+                </a>
+                <a href="mailto:info@finassetpulse.com" class="btn btn-primary btn-sm">
+                  <i class="fas fa-envelope me-1"></i> Email Your Interest
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Growth Plan -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body custom-hover">
+              <h5 class="card-title fw-bold">Growth Plan</h5>
+              <p><strong>Crypto Focus:</strong> Bitcoin + Ethereum</p>
+              <p><strong>Risk Level:</strong> Medium</p>
+              <p><strong>Monthly ROI:</strong> 10%</p>
+              <p><strong>Minimum Deposit:</strong> $100</p>
+              <ul class="list-unstyled mt-3">
+                <li><i class="fas fa-check-circle text-success me-2"></i>Diversified BTC & ETH</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Monthly growth reports</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Manual exit anytime</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Beginner-friendly support</li>
+              </ul>
+              <div class="mt-4 d-flex flex-wrap gap-2">
+                <a href="https://wa.me/your-number" class="btn btn-success btn-sm">
+                  <i class="fab fa-whatsapp me-1"></i> Join on WhatsApp
+                </a>
+                <a href="mailto:info@finassetpulse.com" class="btn btn-primary btn-sm">
+                  <i class="fas fa-envelope me-1"></i> Request Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elite Plan -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body custom-hover">
+              <h5 class="card-title fw-bold">Elite Plan</h5>
+              <p><strong>Crypto Focus:</strong> DeFi Tokens (AAVE, UNI, ARB)</p>
+              <p><strong>Risk Level:</strong> High</p>
+              <p><strong>Monthly ROI:</strong> 15%</p>
+              <p><strong>Minimum Deposit:</strong> $200</p>
+              <ul class="list-unstyled mt-3">
+                <li><i class="fas fa-check-circle text-success me-2"></i>High-growth DeFi assets</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Advanced portfolio management</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Priority support and insights</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Risk-reward optimization</li>
+              </ul>
+              <div class="mt-4 d-flex flex-wrap gap-2">
+                <a href="https://wa.me/your-number" class="btn btn-success btn-sm">
+                  <i class="fab fa-whatsapp me-1"></i> Let's Talk
+                </a>
+                <a href="mailto:info@finassetpulse.com" class="btn btn-primary btn-sm">
+                  <i class="fas fa-envelope me-1"></i> Email for Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <!-- Stats Section -->
+<section class="py-5 bg-light d-flex justify-content-center align-items-center section-full-height">
+  <div class="container text-center">
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="p-4 bg-white rounded shadow">
+          <div class="counter" data-target="1000">1000</div>
+          <p class="text-muted">Minimum Deposit</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 bg-white rounded shadow">
+          <div class="counter" data-target="100000">$50000</div>
+          <p class="text-muted">Total Amount Deposited by Clients</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 bg-white rounded shadow">
+          <div class="counter" data-target="95000">$50000</div>
+          <p class="text-muted">Total Amount Withdrawn Successfully</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 bg-white rounded shadow">
+          <div class="counter" data-target="5000">2000</div>
+          <p class="text-muted">Number of Trade Transactions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5" id="FAQ">
+  <div class="container">
+    <h2 class="mb-4 text-center">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            How can I create an account?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Click on the “Sign Up” button on the homepage and fill in your details. You will receive a confirmation email to activate your account.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            What is the minimum deposit amount?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            The minimum amount you can deposit is $10. We support various payment options for your convenience.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            How long does it take to process withdrawals?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Withdrawals are typically processed within 24 hours. In rare cases, it may take up to 48 hours.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            Is my personal information safe?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, your data is protected with industry-standard encryption and we never share your information with third parties.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<!-- <section class="py-5 bg-light d-flex row justify-content-center align-items-center" id="contact">
+  <div class="container mx-5 px-5 d-flex row justify-content-center align-items-center" style="width: 75%;">
+    <h2 class="mb-4 text-center text-black">Contact Us</h2>
+    <form class="row g-3 bg-white p-4 rounded shadow d-flex row justify-content-center align-items-center" id="contactForm">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required>
+      </div>
+      <div class="col-12">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" rows="5" class="form-control" placeholder="Type your message here..." required></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-dark px-5" id="submitBtn">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section> -->
+
+<section class="py-5 bg-light d-flex row justify-content-center align-items-center" id="contact">
+  <div class="container mx-5 px-5 d-flex row justify-content-center align-items-center" style="width: 75%;">
+    <h2 class="mb-4 text-center text-black">Contact Us</h2>
+
+    <!-- Alert Placeholder -->
+    <div id="alertBox" class="alert d-none" role="alert"></div>
+
+    <form class="row g-3 bg-white p-4 rounded shadow" id="contactForm" novalidate>
+      <div class="col-md-6">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
+        <div class="invalid-feedback" id="nameError"></div>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required>
+        <div class="invalid-feedback" id="emailError"></div>
+      </div>
+      <div class="col-12">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" rows="5" class="form-control" placeholder="Type your message here..." required></textarea>
+        <div class="invalid-feedback" id="messageError"></div>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-dark px-5" id="submitBtn">
+          <span id="btnText">Send Message</span>
+          <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+<footer class="bg-primary text-white text-center py-4 mt-5">
+  <div class="container">
+    <p class="mb-0">&copy; 2025 WildBroker. All rights reserved.</p>
+    <p>Email: info@finassetpulse.com | WhatsApp: <a class="text-white" href="https://wa.me/your-number">Chat Now</a></p>
+  </div>
+</footer>
+
+<!-- Bootstrap & JS Counter Script -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute("data-target");
+        const count = +counter.innerText.replace(/\D/g, "");
+        const speed = 200;
+        const increment = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = target >= 1000 ? `$${count + increment}` : count + increment;
+          setTimeout(updateCount, 30);
+        } else {
+          counter.innerText = target >= 1000 ? `$${target.toLocaleString()}` : target;
+        }
+      };
+      updateCount();
+    });
+  });
+
+</script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
