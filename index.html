@@ -38,6 +38,7 @@
     }
     body {
       padding-top: 80px;
+      font-family: Arial, sans-serif;
     }
     .navbar-nav .nav-link {
       font-weight: 500;
@@ -82,6 +83,16 @@
     #contact{
       width: auto;
     } */
+    .ticker-title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .tradingview-widget-container {
+      border: 1px solid #444;
+      border-radius: 10px;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -120,6 +131,37 @@
       </div>
     </div>
   </nav>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async></script>
+  <script type="text/javascript">
+    new TradingView.widget({
+      "container_id": "tradingview_widget_container",
+      "symbols": [
+        { "proName": "FOREXCOM:EURUSD", "title": "EUR/USD" },
+        { "proName": "FOREXCOM:GBPUSD", "title": "GBP/USD" },
+        { "proName": "FOREXCOM:USDJPY", "title": "USD/JPY" },
+        { "proName": "NASDAQ:NDX", "title": "US 100" },
+        { "proName": "OANDA:SPX500USD", "title": "S&P 500" },
+        { "proName": "FOREXCOM:DJI", "title": "Dow 30" },
+        { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" },
+        { "proName": "BITSTAMP:ETHUSD", "title": "Ethereum" },
+        { "proName": "BINANCE:BNBUSDT", "title": "BNB" },
+        { "proName": "BINANCE:XRPUSDT", "title": "XRP" },
+        { "proName": "BINANCE:SOLUSDT", "title": "Solana" }
+      ],
+      "showSymbolLogo": true,
+      "colorTheme": "dark",
+      "isTransparent": false,
+      "displayMode": "regular",
+      "locale": "en"
+    });
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
 
   <!-- Hero Section -->
   <section class=" bg-black text-white d-flex justify-content-center align-items-center mt-5" id="main" style="min-height:90vh;">
