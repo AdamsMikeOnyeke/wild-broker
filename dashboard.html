@@ -10,6 +10,35 @@
   <style>
     .copy-btn { cursor: pointer; }
     code { word-break: break-all; }
+
+    .crypto-footer {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    border-top: 1px solid #333;
+  }
+
+  .crypto-footer .footer-link {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+  }
+
+  .crypto-footer .footer-link:hover {
+    color: #0f0; /* green accent for hover */
+    text-decoration-color: #0f0;
+  }
+
+  .crypto-footer p {
+    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 768px) {
+    .crypto-footer p {
+      font-size: 1rem;
+    }
+  }
   </style>
 </head>
 <body class="bg-light">
@@ -17,7 +46,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-light bg-white shadow-sm mb-4">
     <div class="container d-flex justify-content-between align-items-center">
-      <a class="navbar-brand fw-bold text-primary" href="#">💰 Smartchaininvestor</a>
+      <a class="navbar-brand fw-bold text-primary" href="#">Smartchaininvestors</a>
       <span class="text-muted small">Welcome, <strong id="user-name">User</strong></span>
     </div>
   </nav>
@@ -114,10 +143,15 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white text-center py-3 mt-5 border-top">
-      <small>© 2025 Smartchaininvestor. All rights reserved. | <a href="#">Privacy Policy</a></small>
+    <footer class="crypto-footer text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-1 fw-bold">&copy; 2025 SmartchainInvestor</p>
+        <p class="mb-2">All rights reserved.</p>
+        <a href="mailto:smartchaininvestors@gmail.com" class="footer-link">
+          smartchaininvestors@gmail.com
+        </a>
+      </div>
     </footer>
-  </div>
 
   <!-- Firebase SDK -->
   <script type="module">

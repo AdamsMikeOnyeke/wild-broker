@@ -33,6 +33,36 @@
 
 
   <style>
+     .crypto-footer {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    border-top: 1px solid #333;
+  }
+
+  .crypto-footer .footer-link {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+  }
+
+  .crypto-footer .footer-link:hover {
+    color: #0f0; /* green accent for hover */
+    text-decoration-color: #0f0;
+  }
+
+  .crypto-footer p {
+    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 768px) {
+    .crypto-footer p {
+      font-size: 1rem;
+    }
+  }
+
+
    .section-stats {
     background: linear-gradient(to bottom right, #ffffff, #00c851); /* white to green */
     min-height: 70vh;
@@ -522,10 +552,13 @@ If you’re interested in other coins, feel free to ask in your message.
 
 
 
-<footer class="bg-primary text-white text-center py-4 mt-5">
+<footer class="crypto-footer text-center py-4 mt-5">
   <div class="container">
-    <p class="mb-0">&copy; 2025 Smartchaininvestor. All rights reserved.</p>
-    <p>Email: smartchaininvestors@gmail.com</p>
+    <p class="mb-1 fw-bold">&copy; 2025 SmartchainInvestor</p>
+    <p class="mb-2">All rights reserved.</p>
+    <a href="mailto:smartchaininvestors@gmail.com" class="footer-link">
+      smartchaininvestors@gmail.com
+    </a>
   </div>
 </footer>
 
