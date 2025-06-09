@@ -27,7 +27,7 @@
       margin-top: 1rem;
     }
 
-    .btn-primary{
+    .btn-primary {
       background-color: black;
       border-color: #0f0;
     }
@@ -39,21 +39,20 @@
     <div class="card text-white mx-auto shadow" style="max-width: 400px;">
       <div class="card-body">
         <h5 class="card-title text-center" id="form-title">Login</h5>
-        <form id="auth-form">
+        <form id="auth-form" autocomplete="off">
           <div class="mb-3" id="name-group">
             <label for="fullName" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="fullName"/>
+            <input type="text" class="form-control" id="fullName" autocomplete="off" />
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" required />
+            <input type="email" class="form-control" id="email" required autocomplete="off" />
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" required />
+            <input type="password" class="form-control" id="password" required autocomplete="off" />
           </div>
 
-          <!-- Button with spinner -->
           <button type="submit" class="btn btn-primary w-100 d-flex align-items-center justify-content-center" id="auth-btn">
             <span id="auth-btn-text">Login</span>
             <div id="auth-spinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status"></div>
@@ -63,8 +62,6 @@
             <small id="toggle-auth">Don't have an account? Signup</small>
           </div>
         </form>
-
-        <!-- Alert container -->
         <div id="alert-container"></div>
       </div>
     </div>
@@ -111,6 +108,13 @@
     const alertContainer = document.getElementById("alert-container");
 
     let isLogin = true;
+
+    // ❗ Force-clear fields on page load
+    window.addEventListener("DOMContentLoaded", () => {
+      fullNameInput.value = "";
+      emailInput.value = "";
+      passwordInput.value = "";
+    });
 
     toggleAuth.addEventListener("click", () => {
       isLogin = !isLogin;
@@ -175,17 +179,11 @@
         }
       } catch (error) {
         let msg = "An error occurred.";
-        if (error.code === "auth/email-already-in-use") {
-          msg = "This email is already in use. Try logging in.";
-        } else if (error.code === "auth/invalid-email") {
-          msg = "Invalid email address.";
-        } else if (error.code === "auth/weak-password") {
-          msg = "Password should be at least 6 characters.";
-        } else if (error.code === "auth/user-not-found") {
-          msg = "No user found with this email.";
-        } else if (error.code === "auth/wrong-password") {
-          msg = "Incorrect password.";
-        }
+        if (error.code === "auth/email-already-in-use") msg = "This email is already in use. Try logging in.";
+        else if (error.code === "auth/invalid-email") msg = "Invalid email address.";
+        else if (error.code === "auth/weak-password") msg = "Password should be at least 6 characters.";
+        else if (error.code === "auth/user-not-found") msg = "No user found with this email.";
+        else if (error.code === "auth/wrong-password") msg = "Incorrect password.";
         showAlert(msg);
       } finally {
         authBtn.disabled = false;
